@@ -16,7 +16,7 @@ define outset::login_privleged_every(
 
     if $ensure == 'present'{
         if $type == 'file'{
-            file {"/usr/local/outset/login-every/${priority}-${title}":
+            file {"/usr/local/outset/login-privleged-every/${priority}-${title}":
                 source => $script,
                 owner  => 0,
                 group  => 0,
@@ -25,7 +25,7 @@ define outset::login_privleged_every(
         }
 
         if $type == 'template'{
-            file {"/usr/local/outset/login-every/${priority}-${title}":
+            file {"/usr/local/outset/login-privleged-every/${priority}-${title}":
                 content => $script,
                 owner  => 0,
                 group  => 0,
@@ -35,7 +35,7 @@ define outset::login_privleged_every(
     }
 
     if $ensure == 'absent' {
-        file {"/usr/local/outset/login-every/${priority}-${title}":
+        file {"/usr/local/outset/login-privleged-every/${priority}-${title}":
             ensure => absent,
         }
     }
