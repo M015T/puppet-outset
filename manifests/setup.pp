@@ -48,8 +48,8 @@ class outset::setup {
     }
   }
 
-  if ! defined(File['/usr/local/outset/login-privleged-every']) {
-    file { '/usr/local/outset/login-privleged-every':
+  if ! defined(File['/usr/local/outset/login-privileged-every']) {
+    file { '/usr/local/outset/login-privileged-every':
       ensure => directory,
     }
   }
