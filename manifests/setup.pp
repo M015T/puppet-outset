@@ -36,8 +36,6 @@ class outset::setup {
       }
   }
 
-
-
   if ! defined(File['/usr/local/outset/login-once']) {
     file { '/usr/local/outset/login-once':
       ensure => directory,
@@ -46,6 +44,12 @@ class outset::setup {
 
   if ! defined(File['/usr/local/outset/login-every']) {
     file { '/usr/local/outset/login-every':
+      ensure => directory,
+    }
+  }
+
+  if ! defined(File['/usr/local/outset/login-privleged-every']) {
+    file { '/usr/local/outset/login-privleged-every':
       ensure => directory,
     }
   }
