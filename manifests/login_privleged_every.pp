@@ -1,4 +1,4 @@
-define outset::login_privleged_every(
+define outset::login_privileged_every(
     $script,
     $priority = '10',
     $ensure = 'present',
